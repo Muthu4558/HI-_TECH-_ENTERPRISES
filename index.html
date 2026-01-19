@@ -21,6 +21,43 @@
 </head>
 
 <body class="font-['Poppins'] bg-[#F6F3ED]">
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/916374335075?text=Hello%20Hi%20Tech%20Enterprises%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services."
+        target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Left Floating Contact Bar -->
+    <div class="left-contact-bar">
+
+        <!-- Call -->
+        <a href="tel:+919047122225" class="contact-item call">
+            <span class="icon">
+                <i class="fa-solid fa-phone"></i>
+            </span>
+            <span class="text">Call +91 90471 22225</span>
+        </a>
+
+        <!-- WhatsApp -->
+        <a href="https://wa.me/916374335075?text=Hello%20Hi%20Tech%20Enterprises%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services."
+            target="_blank" class="contact-item whatsapp">
+            <span class="icon">
+                <i class="fa-brands fa-whatsapp"></i>
+            </span>
+            <span class="text">Chat on WhatsApp</span>
+        </a>
+
+        <!-- Instagram -->
+        <a href="#" target="_blank" class="contact-item instagram">
+            <span class="icon">
+                <i class="fa-brands fa-instagram"></i>
+            </span>
+            <span class="text">Follow on Instagram</span>
+        </a>
+
+    </div>
+
     <!-- Navbar -->
     <nav id="navbar" class="w-full flex justify-center pt-6 fixed top-0 left-0 z-50 transition-transform duration-300">
 
@@ -29,12 +66,12 @@
 
             <!-- Logo -->
             <a href="#" class="flex items-center gap-2">
-                <img src="./assets/images/hi-tech-logo.jpeg" alt="Logo" class="h-10">
+                <img src="./assets/images/hi-tech-logo.jpeg" alt="Logo" class="h-16">
             </a>
 
             <!-- Desktop Menu -->
             <ul class="hidden md:flex items-center gap-10 font-medium text-[#2B2B2B]">
-                <li><a href="#" class="hover:text-[#C9A24D] transition">Home</a></li>
+                <li><a href="./index.html" class="hover:text-[#C9A24D] transition">Home</a></li>
                 <li><a href="#about-us" class="hover:text-[#C9A24D] transition">About Us</a></li>
 
                 <li class="relative group">
@@ -109,11 +146,19 @@
                 </li>
             </ul>
 
-            <!-- Contact Button -->
-            <a href="#contact"
-                class="hidden md:inline-flex items-center rounded-full bg-[#1F2F45] px-6 py-2 text-[#F6F3ED] font-medium shadow-md hover:bg-[#162235] transition">
-                Contact Us
-            </a>
+            <div>
+                <!-- phone -->
+                <a href="tel:+919047122225"
+                    class="hidden md:inline-flex border border-[#1F2F45] items-center rounded-full px-6 py-2 hover:text-[#C9A24D] font-medium transition gap-2">
+                    <span><i class="fa-solid fa-phone"></i></span> +91 63743 35075
+                </a>
+
+                <!-- Contact Button -->
+                <a href="./contact.html"
+                    class="hidden md:inline-flex items-center rounded-full bg-[#1F2F45] px-6 py-2 text-[#F6F3ED] font-medium shadow-md hover:bg-[#162235] transition gap-2">
+                    <span><i class="fa-solid fa-clipboard-list"></i></span> Contact Us
+                </a>
+            </div>
 
             <!-- 🔥 Mobile Menu Toggle -->
             <button id="menuBtn"
@@ -125,7 +170,7 @@
 
         <!-- Mobile Menu -->
         <div id="mobileMenu"
-            class="md:hidden hidden absolute top-[110px] z-50 w-[92%] bg-[#F6F3ED] rounded-2xl shadow-xl p-6">
+            class="md:hidden hidden absolute top-[130px] z-50 w-[92%] bg-[#F6F3ED] rounded-2xl shadow-xl p-6">
 
             <ul class="flex flex-col gap-5 font-medium text-[#2B2B2B]">
                 <li><a href="#">Home</a></li>
@@ -198,11 +243,11 @@
     </nav>
 
     <!-- Hero -->
-    <section class="w-full bg-[#F6F3ED] pt-28 sm:pt-52 pb-16 sm:pb-24">
+    <section class="w-full bg-[#F6F3ED] pt-36 sm:pt-52 pb-16 sm:pb-24">
         <div class="mx-auto w-[92%] max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
             <!-- Left Content -->
-            <div class="order-2 lg:order-1 space-y-6 text-center lg:text-left">
+            <div class="order-1 lg:order-2 space-y-6 text-center lg:text-left">
 
                 <!-- Accent -->
                 <div class="flex items-center justify-center lg:justify-start gap-3">
@@ -232,7 +277,7 @@
                         Contact Us Today
                     </a>
 
-                    <a href="#services"
+                    <a href="#service"
                         class="inline-flex items-center justify-center rounded-full border-2 border-[#C9A24D] px-8 py-3 text-[#1F2F45] font-semibold hover:bg-[#C9A24D] transition">
                         View Services
                     </a>
@@ -240,7 +285,7 @@
             </div>
 
             <!-- Right Image -->
-            <div class="order-1 lg:order-2 relative flex justify-center">
+            <div class="order-2 lg:order-2 relative flex justify-center">
 
                 <!-- Decorative blur -->
                 <div class="absolute -top-8 -left-8 w-32 h-32 sm:w-40 sm:h-40 bg-[#C9A24D]/20 rounded-full blur-3xl">
@@ -415,7 +460,7 @@
     </section>
 
     <!-- Services -->
-    <section class="w-full bg-[#F6F3ED] py-16 sm:py-24">
+    <section id="service" class="w-full bg-[#F6F3ED] py-16 sm:py-24">
         <div class="mx-auto w-[92%] max-w-7xl">
 
             <!-- Section Header -->
@@ -732,29 +777,30 @@
         </div>
     </section>
 
-    <!-- Curved Footer -->
-    <footer class="relative bg-[#1F2F45] text-[#F6F3ED] mt-18">
+    <!-- Footer -->
+    <footer class="relative bg-[#1F2F45] text-[#F6F3ED] mt-20">
 
         <!-- Perfect Curve -->
         <div class="absolute -top-1 left-0 w-full overflow-hidden leading-none">
-            <svg viewBox="0 0 1440 100" class="w-full h-[100px]" preserveAspectRatio="none">
+            <svg viewBox="0 0 1440 100" class="w-full h-[80px] sm:h-[100px]" preserveAspectRatio="none">
                 <path d="M0,80 C240,20 480,20 720,50 960,80 1200,80 1440,40 L1440,0 L0,0 Z" fill="#F6F3ED">
                 </path>
             </svg>
         </div>
 
         <!-- Footer Content -->
-        <div class="relative pt-32 pb-10">
+        <div class="relative pt-24 sm:pt-32 pb-10">
             <div class="mx-auto w-[92%] max-w-7xl">
 
                 <!-- Top Footer -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 pb-10 border-b border-white/20">
+                <div
+                    class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 pb-10 border-b border-white/20 text-center sm:text-left">
 
                     <!-- Brand -->
-                    <div>
+                    <div class="flex flex-col items-center sm:items-start">
                         <img width="140" class="rounded-2xl mb-5" src="./assets/images/hi-tech-logo.jpeg"
                             alt="Hi Tech Enterprises">
-                        <p class="text-sm text-[#F6F3ED]/80 leading-relaxed">
+                        <p class="text-sm text-[#F6F3ED]/80 leading-relaxed max-w-xs">
                             Practical, space-saving, and everyday home solutions designed for
                             modern living with quality and care.
                         </p>
@@ -781,19 +827,19 @@
                             Contact
                         </h4>
                         <ul class="space-y-3 text-sm text-[#F6F3ED]/80">
-                            <li class="flex items-center gap-3">
+                            <li class="flex items-center justify-center sm:justify-start gap-3">
                                 <i class="fa-solid fa-phone text-[#C9A24D]"></i>
                                 <a href="tel:+916374335075" class="hover:text-[#C9A24D] transition">
                                     +91 6374335075
                                 </a>
                             </li>
-                            <li class="flex items-center gap-3">
+                            <li class="flex items-center justify-center sm:justify-start gap-3">
                                 <i class="fa-solid fa-envelope text-[#C9A24D]"></i>
                                 <a href="mailto:mailtohitech15@gmail.com" class="hover:text-[#C9A24D] transition">
                                     mailtohitech15@gmail.com
                                 </a>
                             </li>
-                            <li class="flex items-center gap-3">
+                            <li class="flex items-center justify-center sm:justify-start gap-3">
                                 <i class="fa-solid fa-location-dot text-[#C9A24D]"></i>
                                 <span>Chennai, Tamil Nadu</span>
                             </li>
@@ -801,11 +847,11 @@
                     </div>
 
                     <!-- CTA + Social -->
-                    <div>
+                    <div class="flex flex-col items-center sm:items-start">
                         <h4 class="font-semibold mb-4 text-[#C9A24D]">
                             Get in Touch
                         </h4>
-                        <p class="text-sm text-[#F6F3ED]/80 mb-4">
+                        <p class="text-sm text-[#F6F3ED]/80 mb-4 max-w-xs">
                             Ready to upgrade your home? Contact us today.
                         </p>
 
@@ -815,7 +861,7 @@
                         </a>
 
                         <!-- Social Icons -->
-                        <div class="flex gap-4 mt-4">
+                        <div class="flex gap-4">
                             <a href="#" class="social-icon">
                                 <i class="fa-brands fa-instagram"></i>
                             </a>
@@ -832,7 +878,7 @@
 
                 <!-- Bottom Footer -->
                 <div
-                    class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-[#F6F3ED]/70">
+                    class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-[#F6F3ED]/70 text-center sm:text-left">
 
                     <p>
                         © <span id="year"></span> Hi Tech Enterprises. All rights reserved.
@@ -856,7 +902,6 @@
     <script>
         document.getElementById("year").textContent = new Date().getFullYear();
     </script>
-
 
     <script src="assets/js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
