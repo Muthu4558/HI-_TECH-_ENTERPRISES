@@ -331,23 +331,25 @@ body {
 }
 
 /* Contact Info Cards */
+.contact-info {
+    background-color: #1F2F45;
+    border-radius: 20px;
+    color: #ffffff;
+}
+
 .contact-info-card {
     display: flex;
     align-items: center;
     gap: 16px;
-    background-color: #ffffff;
     padding: 18px 20px;
-    border-radius: 18px;
-    border: 1px solid rgba(0, 0, 0, 0.05);
-    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.05);
 }
 
 .contact-info-card i {
     width: 46px;
     height: 46px;
     border-radius: 50%;
-    background-color: #1F2F45;
-    color: #F6F3ED;
+    background-color: #F6F3ED;
+    color: #1F2F45;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -365,7 +367,7 @@ body {
 .contact-info-card .value {
     font-size: 15px;
     font-weight: 600;
-    color: #2B2B2B;
+    color: #ffffff;
 }
 
 /* Contact Form */
