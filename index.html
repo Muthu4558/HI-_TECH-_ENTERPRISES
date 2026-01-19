@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HiTechEnterprises</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/feather-icons"></script>
+    <!-- AOS CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+</head>
+
+<body class="font-['Poppins'] bg-[#F6F3ED]">
+    <!-- Navbar -->
+    <nav id="navbar" class="w-full flex justify-center pt-6 fixed top-0 left-0 z-50 transition-transform duration-300">
+
+        <div
+            class="w-[92%] max-w-7xl bg-[#F6F3ED] border border-black rounded-2xl shadow-lg px-6 py-4 flex items-center justify-between">
+
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-2">
+                <img src="./assets/images/hi-tech-logo.jpeg" alt="Logo" class="h-10">
+            </a>
+
+            <!-- Desktop Menu -->
+            <ul class="hidden md:flex items-center gap-10 font-medium text-[#2B2B2B]">
+                <li><a href="#" class="hover:text-[#C9A24D] transition">Home</a></li>
+                <li><a href="#about-us" class="hover:text-[#C9A24D] transition">About Us</a></li>
+
+                <li class="relative group">
+                    <button class="flex items-center gap-1 hover:text-[#C9A24D] transition">
+                        Services
+                        <svg class="w-4 h-4 mt-1 transition-transform group-hover:rotate-180" fill="none"
+                            stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+
+                    <div
+                        class="absolute top-full left-1/2 -translate-x-1/2 mt-4 w-[520px] bg-white rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+
+                        <!-- Header -->
+                        <div class="px-6 py-4 border-b border-black/10">
+                            <p class="text-sm font-semibold text-[#1F2F45] uppercase tracking-wide">
+                                Our Services
+                            </p>
+                        </div>
+
+                        <!-- Services Grid -->
+                        <div class="grid grid-cols-2 gap-x-6 gap-y-4 p-6 text-sm">
+
+                            <a href="#" class="dropdown-item">
+                                <i class="fa-solid fa-bug"></i>
+                                Mosquito Nets
+                            </a>
+
+                            <a href="#" class="dropdown-item">
+                                <i class="fa-solid fa-shirt"></i>
+                                Ceiling Cloth Hangers
+                            </a>
+
+                            <a href="#" class="dropdown-item">
+                                <i class="fa-solid fa-shoe-prints"></i>
+                                Wall Mounted Shoe Racks
+                            </a>
+
+                            <a href="#" class="dropdown-item">
+                                <i class="fa-solid fa-door-open"></i>
+                                Toughened Glass Doors
+                            </a>
+
+                            <a href="#" class="dropdown-item">
+                                <i class="fa-solid fa-window-maximize"></i>
+                                UPVC Windows & Doors
+                            </a>
+
+                            <a href="#" class="dropdown-item">
+                                <i class="fa-solid fa-layer-group"></i>
+                                ACP Cladding Works
+                            </a>
+
+                            <a href="#" class="dropdown-item">
+                                <i class="fa-solid fa-box"></i>
+                                PVC Loft Cupboards
+                            </a>
+
+                            <a href="#" class="dropdown-item">
+                                <i class="fa-solid fa-border-all"></i>
+                                False Ceiling Works
+                            </a>
+
+                            <a href="#" class="dropdown-item col-span-2">
+                                <i class="fa-solid fa-industry"></i>
+                                All Kinds of Aluminum Fabrication Works
+                            </a>
+
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+            <!-- Contact Button -->
+            <a href="#contact"
+                class="hidden md:inline-flex items-center rounded-full bg-[#1F2F45] px-6 py-2 text-[#F6F3ED] font-medium shadow-md hover:bg-[#162235] transition">
+                Contact Us
+            </a>
+
+            <!-- 🔥 Mobile Menu Toggle -->
+            <button id="menuBtn"
+                class="md:hidden relative w-12 h-12 rounded-full flex items-center justify-center bg-[#1F2F45] shadow-lg overflow-hidden">
+                <span class="pulse"></span>
+                <span class="cross"></span>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu"
+            class="md:hidden hidden absolute top-[110px] z-50 w-[92%] bg-[#F6F3ED] rounded-2xl shadow-xl p-6">
+
+            <ul class="flex flex-col gap-5 font-medium text-[#2B2B2B]">
+                <li><a href="#">Home</a></li>
+                <li><a href="#about-us">About Us</a></li>
+
+                <li>
+                    <details>
+                        <summary class="flex justify-between cursor-pointer">
+                            Services
+                            <span>⌄</span>
+                        </summary>
+                        <div class="mt-4 grid grid-cols-1 gap-3 text-sm text-[#2B2B2B]">
+
+                            <a href="#" class="mobile-service">
+                                <i class="fa-solid fa-bug"></i>
+                                Mosquito Nets
+                            </a>
+
+                            <a href="#" class="mobile-service">
+                                <i class="fa-solid fa-shirt"></i>
+                                Ceiling Cloth Hangers
+                            </a>
+
+                            <a href="#" class="mobile-service">
+                                <i class="fa-solid fa-shoe-prints"></i>
+                                Wall Mounted Metal Shoe Racks
+                            </a>
+
+                            <a href="#" class="mobile-service">
+                                <i class="fa-solid fa-door-open"></i>
+                                Toughened Glass Doors
+                            </a>
+
+                            <a href="#" class="mobile-service">
+                                <i class="fa-solid fa-window-maximize"></i>
+                                UPVC Windows and Doors
+                            </a>
+
+                            <a href="#" class="mobile-service">
+                                <i class="fa-solid fa-layer-group"></i>
+                                ACP Cladding Works
+                            </a>
+
+                            <a href="#" class="mobile-service">
+                                <i class="fa-solid fa-box"></i>
+                                PVC Loft Cupboards and Doors
+                            </a>
+
+                            <a href="#" class="mobile-service">
+                                <i class="fa-solid fa-border-all"></i>
+                                False Ceiling Works
+                            </a>
+
+                            <a href="#" class="mobile-service">
+                                <i class="fa-solid fa-industry"></i>
+                                All Kinds of Aluminum Fabrication Works
+                            </a>
+                        </div>
+                    </details>
+                </li>
+
+                <li>
+                    <a href="#contact"
+                        class="inline-block rounded-full bg-[#1F2F45] px-6 py-2 text-[#F6F3ED] text-center">
+                        Contact Us
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="w-full bg-[#F6F3ED] pt-28 sm:pt-52 pb-16 sm:pb-24">
+        <div class="mx-auto w-[92%] max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+
+            <!-- Left Content -->
+            <div class="order-2 lg:order-1 space-y-6 text-center lg:text-left">
+
+                <!-- Accent -->
+                <div class="flex items-center justify-center lg:justify-start gap-3">
+                    <span class="w-8 h-[3px] bg-[#C9A24D]"></span>
+                    <span class="text-xs sm:text-sm font-semibold tracking-wider text-[#C9A24D] uppercase">
+                        Trusted Fabrication Experts
+                    </span>
+                </div>
+
+                <!-- Heading -->
+                <h1 class="text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-extrabold leading-tight text-[#1F2F45]">
+                    Practical Home Solutions <br class="hidden sm:block" />
+                    <span class="text-[#C9A24D]">& Fabrication</span>
+                </h1>
+
+                <!-- Description -->
+                <p class="text-base sm:text-lg text-[#2B2B2B]/80 max-w-xl mx-auto lg:mx-0">
+                    Specialists in <strong>Mosquito Nets</strong>,
+                    <strong>Safety Doors</strong>, and
+                    <strong>Smart Space-Saving Installations</strong> designed for modern homes.
+                </p>
+
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row gap-4 pt-4 justify-center lg:justify-start">
+                    <a href="#contact"
+                        class="inline-flex items-center justify-center rounded-full bg-[#1F2F45] px-8 py-3 text-[#F6F3ED] font-semibold shadow-lg hover:bg-[#162235] transition">
+                        Contact Us Today
+                    </a>
+
+                    <a href="#services"
+                        class="inline-flex items-center justify-center rounded-full border-2 border-[#C9A24D] px-8 py-3 text-[#1F2F45] font-semibold hover:bg-[#C9A24D] transition">
+                        View Services
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right Image -->
+            <div class="order-1 lg:order-2 relative flex justify-center">
+
+                <!-- Decorative blur -->
+                <div class="absolute -top-8 -left-8 w-32 h-32 sm:w-40 sm:h-40 bg-[#C9A24D]/20 rounded-full blur-3xl">
+                </div>
+                <div
+                    class="absolute -bottom-8 -right-8 w-32 h-32 sm:w-40 sm:h-40 bg-[#1F2F45]/20 rounded-full blur-3xl">
+                </div>
+
+                <!-- Image Card -->
+                <div class="relative bg-white rounded-3xl shadow-xl p-4 sm:p-6 w-full max-w-md sm:max-w-lg">
+
+                    <img src="./assets/images/hero-home-solution.jpg" alt="Home Fabrication Solutions"
+                        class="w-full h-[220px] sm:h-[280px] md:h-[320px] object-cover rounded-2xl">
+
+                    <!-- Overlay Badge -->
+                    <div
+                        class="absolute bottom-4 left-4 right-4 bg-[#1F2F45]/90 backdrop-blur-md rounded-xl p-3 sm:p-4 text-[#F6F3ED]">
+                        <p class="font-semibold text-sm sm:text-base">
+                            Space • Comfort • Quality
+                        </p>
+                        <p class="text-xs sm:text-sm opacity-90">
+                            Custom solutions tailored for your home
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about-us" class="w-full bg-white py-16 sm:py-24">
+        <div class="mx-auto w-[92%] max-w-7xl">
+
+            <!-- Section Header -->
+            <div class="max-w-3xl mb-14">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="w-10 h-[3px] bg-[#C9A24D]"></span>
+                    <span class="text-sm font-semibold tracking-wider uppercase text-[#C9A24D]">
+                        Who We Are
+                    </span>
+                </div>
+
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-[#1F2F45] leading-tight">
+                    Practical Home Solutions <br class="hidden sm:block" />
+                    Built for Everyday Living
+                </h2>
+            </div>
+
+            <!-- Content Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 items-start">
+
+                <!-- Left Content with Icons -->
+                <div class="space-y-6 text-[#2B2B2B]/90 leading-relaxed">
+
+                    <div class="flex gap-4">
+                        <i class="fa-solid fa-house-chimney text-[#C9A24D] text-xl mt-1"></i>
+                        <p>
+                            <strong>Hi Tech Enterprises</strong> delivers
+                            <strong>practical, space-saving home solutions</strong>
+                            that improve comfort, hygiene, and convenience in modern homes.
+                        </p>
+                    </div>
+
+                    <div class="flex gap-4">
+                        <i class="fa-solid fa-bug text-[#C9A24D] text-xl mt-1"></i>
+                        <p>
+                            We specialize in premium <strong>mosquito nets</strong> that ensure a
+                            mosquito-free environment while maintaining airflow and natural light.
+                        </p>
+                    </div>
+
+                    <div class="flex gap-4">
+                        <i class="fa-solid fa-ruler-combined text-[#C9A24D] text-xl mt-1"></i>
+                        <p>
+                            Our <strong>wall-mounted shoe racks</strong> and
+                            <strong>ceiling cloth hangers</strong> are designed for durability,
+                            space efficiency, and daily use.
+                        </p>
+                    </div>
+
+                    <div class="flex gap-4">
+                        <i class="fa-solid fa-layer-group text-[#C9A24D] text-xl mt-1"></i>
+                        <p>
+                            We also provide <strong>toughened glass doors</strong>,
+                            <strong>UPVC windows & doors</strong>,
+                            <strong>ACP cladding</strong>,
+                            <strong>PVC loft cupboards</strong>,
+                            <strong>false ceiling works</strong>, and other
+                            <strong>aluminum fabrication solutions</strong>.
+                        </p>
+                    </div>
+
+                    <div class="flex gap-4 font-medium">
+                        <i class="fa-solid fa-handshake text-[#C9A24D] text-xl mt-1"></i>
+                        <p>
+                            Our promise is <strong>reliable products</strong>,
+                            <strong>neat installation</strong>, and
+                            <strong>customer-focused service</strong> at affordable prices.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Right Highlight Cards -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+
+                    <!-- Card -->
+                    <div
+                        class="bg-[#F6F3ED] rounded-2xl p-6 border border-black/5 shadow-sm hover:shadow-md transition">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="w-10 h-10 rounded-full bg-[#1F2F45] flex items-center justify-center">
+                                <i class="fa-solid fa-expand text-[#F6F3ED]"></i>
+                            </div>
+                            <h3 class="font-semibold text-[#1F2F45]">
+                                Space-Saving Design
+                            </h3>
+                        </div>
+                        <p class="text-sm text-[#2B2B2B]/80">
+                            Smart designs that maximize usable space without compromising comfort.
+                        </p>
+                    </div>
+
+                    <div
+                        class="bg-[#F6F3ED] rounded-2xl p-6 border border-black/5 shadow-sm hover:shadow-md transition">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="w-10 h-10 rounded-full bg-[#1F2F45] flex items-center justify-center">
+                                <i class="fa-solid fa-award text-[#F6F3ED]"></i>
+                            </div>
+                            <h3 class="font-semibold text-[#1F2F45]">
+                                Quality Materials
+                            </h3>
+                        </div>
+                        <p class="text-sm text-[#2B2B2B]/80">
+                            Durable materials chosen for long-term use and low maintenance.
+                        </p>
+                    </div>
+
+                    <div
+                        class="bg-[#F6F3ED] rounded-2xl p-6 border border-black/5 shadow-sm hover:shadow-md transition">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="w-10 h-10 rounded-full bg-[#1F2F45] flex items-center justify-center">
+                                <i class="fa-solid fa-screwdriver-wrench text-[#F6F3ED]"></i>
+                            </div>
+                            <h3 class="font-semibold text-[#1F2F45]">
+                                Neat Installation
+                            </h3>
+                        </div>
+                        <p class="text-sm text-[#2B2B2B]/80">
+                            Clean, precise installation with attention to every detail.
+                        </p>
+                    </div>
+
+                    <div
+                        class="bg-[#F6F3ED] rounded-2xl p-6 border border-black/5 shadow-sm hover:shadow-md transition">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="w-10 h-10 rounded-full bg-[#1F2F45] flex items-center justify-center">
+                                <i class="fa-solid fa-users text-[#F6F3ED]"></i>
+                            </div>
+                            <h3 class="font-semibold text-[#1F2F45]">
+                                Customer-Focused
+                            </h3>
+                        </div>
+                        <p class="text-sm text-[#2B2B2B]/80">
+                            Honest advice, fair pricing, and solutions tailored to your needs.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="w-full bg-[#F6F3ED] py-16 sm:py-24">
+        <div class="mx-auto w-[92%] max-w-7xl">
+
+            <!-- Section Header -->
+            <div class="max-w-3xl mb-14">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="w-10 h-[3px] bg-[#C9A24D]"></span>
+                    <span class="text-sm font-semibold tracking-wider uppercase text-[#C9A24D]">
+                        Our Services
+                    </span>
+                </div>
+
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-[#1F2F45] leading-tight mb-4">
+                    Comprehensive fabrication and netting solutions for your home.
+                </h2>
+            </div>
+
+            <!-- Services Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Service Card -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-bug"></i>
+                    </div>
+                    <h3>Mosquito Net Solutions</h3>
+                    <p>
+                        High-quality velcro and frame-based mosquito nets for windows and doors.
+                        Keep your home safe and airy.
+                    </p>
+                </div>
+
+                <!-- Service Card -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-ruler-combined"></i>
+                    </div>
+                    <h3>Space Saving Solutions</h3>
+                    <p>
+                        Custom wall-mounted metal shoe racks and ceiling cloth hangers designed
+                        for durability and efficient space usage.
+                    </p>
+                </div>
+
+                <!-- Service Card -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-window-maximize"></i>
+                    </div>
+                    <h3>Windows & Doors</h3>
+                    <p>
+                        Professional installation of UPVC windows and doors, as well as
+                        Toughened Glass door solutions.
+                    </p>
+                </div>
+
+                <!-- Service Card -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-industry"></i>
+                    </div>
+                    <h3>Fabrication Works</h3>
+                    <p>
+                        We handle ACP cladding, false ceiling works, and other aluminum-based
+                        solutions for homes and offices.
+                    </p>
+                </div>
+
+                <!-- Service Card -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-box"></i>
+                    </div>
+                    <h3>PVC Interiors</h3>
+                    <p>
+                        Durable and neat PVC loft cupboards and doors to organize your storage
+                        space effectively.
+                    </p>
+                </div>
+
+                <!-- Service Card -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                    </div>
+                    <h3>General Maintenance</h3>
+                    <p>
+                        Netlon services and fabrication repairs delivered with neat installation
+                        and customer-focused service.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Commitment -->
+    <section class="w-full bg-white py-16 sm:py-24">
+        <div class="mx-auto w-[92%] max-w-6xl">
+
+            <!-- Section Header -->
+            <div class="text-center max-w-2xl mx-auto mb-14">
+                <div class="flex items-center justify-center gap-3 mb-4">
+                    <span class="w-10 h-[3px] bg-[#C9A24D]"></span>
+                    <span class="text-sm font-semibold tracking-wider uppercase text-[#C9A24D]">
+                        Our Commitment
+                    </span>
+                    <span class="w-10 h-[3px] bg-[#C9A24D]"></span>
+                </div>
+
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-[#1F2F45]">
+                    What You Can Always Expect From Us
+                </h2>
+            </div>
+
+            <!-- ================= MOBILE VIEW ================= -->
+            <div class="grid grid-cols-1 gap-6 md:hidden">
+
+                <div class="commitment-card text-center">
+                    <div class="commitment-icon mx-auto">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3>Reliable Products</h3>
+                    <p>
+                        We use only high-quality materials built for long-term daily use.
+                    </p>
+                </div>
+
+                <div class="commitment-card text-center">
+                    <div class="commitment-icon mx-auto">
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                    </div>
+                    <h3>Neat Installation</h3>
+                    <p>
+                        Our work is clean, precise, and respectful of your home environment.
+                    </p>
+                </div>
+
+                <div class="commitment-card text-center">
+                    <div class="commitment-icon mx-auto">
+                        <i class="fa-solid fa-tags"></i>
+                    </div>
+                    <h3>Affordable Pricing</h3>
+                    <p>
+                        Customer-focused service at prices that fit your budget.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- ================= DESKTOP VIEW ================= -->
+            <div class="hidden md:block relative mt-20">
+
+                <!-- Vertical Line -->
+                <div class="absolute left-1/2 top-0 h-full w-[2px] bg-[#C9A24D]/40 -translate-x-1/2">
+                </div>
+
+                <!-- Item 1 -->
+                <div class="grid grid-cols-2 items-center gap-5 mb-20">
+                    <div class="pr-14 text-right">
+                        <div class="commitment-card ml-auto">
+                            <h3>Reliable Products</h3>
+                            <p>
+                                We use only high-quality materials built for long-term daily use.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-start">
+                        <div class="timeline-icon">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="grid grid-cols-2 items-center gap-5 mb-20">
+                    <div class="flex justify-end">
+                        <div class="timeline-icon">
+                            <i class="fa-solid fa-screwdriver-wrench"></i>
+                        </div>
+                    </div>
+
+                    <div class="pl-14">
+                        <div class="commitment-card">
+                            <h3>Neat Installation</h3>
+                            <p>
+                                Our work is clean, precise, and respectful of your home environment.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="grid grid-cols-2 items-center gap-5">
+                    <div class="pr-14 text-right">
+                        <div class="commitment-card ml-auto">
+                            <h3>Affordable Pricing</h3>
+                            <p>
+                                Customer-focused service at prices that fit your budget.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-start">
+                        <div class="timeline-icon">
+                            <i class="fa-solid fa-tags"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="w-full bg-[#F6F3ED] py-16 sm:py-24">
+        <div class="mx-auto w-[92%] max-w-7xl">
+
+            <!-- Section Header -->
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <div class="flex items-center justify-center gap-3 mb-4">
+                    <span class="w-10 h-[3px] bg-[#C9A24D]"></span>
+                    <span class="text-sm font-semibold tracking-wider uppercase text-[#C9A24D]">
+                        Contact Us
+                    </span>
+                    <span class="w-10 h-[3px] bg-[#C9A24D]"></span>
+                </div>
+
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-[#1F2F45] mb-4">
+                    Ready to upgrade your home?
+                </h2>
+
+                <p class="text-[#2B2B2B]/80">
+                    Call us for a free consultation.
+                </p>
+            </div>
+
+            <!-- Content Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+
+                <!-- Contact Info -->
+                <div class="space-y-8">
+
+                    <div class="contact-info-card">
+                        <i class="fa-solid fa-phone"></i>
+                        <div>
+                            <p class="label">Phone</p>
+                            <p class="value">+91 6374335075</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <i class="fa-solid fa-envelope"></i>
+                        <div>
+                            <p class="label">Email</p>
+                            <p class="value">mailtohitech15@gmail.com</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div>
+                            <p class="label">Location</p>
+                            <p class="value">Chennai, Tamil Nadu</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-card">
+                    <h3 class="text-xl font-extrabold text-[#1F2F45] mb-6">
+                        Request a Visit
+                    </h3>
+
+                    <form class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+
+                        <div class="sm:col-span-2">
+                            <label class="form-label">Name</label>
+                            <input type="text" class="form-input" placeholder="Your full name">
+                        </div>
+
+                        <div>
+                            <label class="form-label">Phone</label>
+                            <input type="tel" class="form-input" placeholder="+91">
+                        </div>
+
+                        <div>
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-input" placeholder="example@email.com">
+                        </div>
+
+                        <div>
+                            <label class="form-label">Location</label>
+                            <input type="text" class="form-input" placeholder="Your area / city">
+                        </div>
+
+                        <div>
+                            <label class="form-label">Date of Visit</label>
+                            <input type="date" class="form-input">
+                        </div>
+
+                        <div class="sm:col-span-2 pt-4">
+                            <button type="submit"
+                                class="w-full rounded-full bg-[#1F2F45] px-6 py-3 text-[#F6F3ED] font-semibold shadow-lg hover:bg-[#162235] transition">
+                                Book Free Consultation
+                            </button>
+                        </div>
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Curved Footer -->
+    <footer class="relative bg-[#1F2F45] text-[#F6F3ED] mt-18">
+
+        <!-- Perfect Curve -->
+        <div class="absolute -top-1 left-0 w-full overflow-hidden leading-none">
+            <svg viewBox="0 0 1440 100" class="w-full h-[100px]" preserveAspectRatio="none">
+                <path d="M0,80 C240,20 480,20 720,50 960,80 1200,80 1440,40 L1440,0 L0,0 Z" fill="#F6F3ED">
+                </path>
+            </svg>
+        </div>
+
+        <!-- Footer Content -->
+        <div class="relative pt-32 pb-10">
+            <div class="mx-auto w-[92%] max-w-7xl">
+
+                <!-- Top Footer -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 pb-10 border-b border-white/20">
+
+                    <!-- Brand -->
+                    <div>
+                        <img width="140" class="rounded-2xl mb-5" src="./assets/images/hi-tech-logo.jpeg"
+                            alt="Hi Tech Enterprises">
+                        <p class="text-sm text-[#F6F3ED]/80 leading-relaxed">
+                            Practical, space-saving, and everyday home solutions designed for
+                            modern living with quality and care.
+                        </p>
+                    </div>
+
+                    <!-- Services -->
+                    <div>
+                        <h4 class="font-semibold mb-4 text-[#C9A24D]">
+                            Services
+                        </h4>
+                        <ul class="space-y-2 text-sm text-[#F6F3ED]/80">
+                            <li><a href="#services" class="hover:text-[#C9A24D] transition">Mosquito Nets</a></li>
+                            <li><a href="#services" class="hover:text-[#C9A24D] transition">Space Saving Solutions</a>
+                            </li>
+                            <li><a href="#services" class="hover:text-[#C9A24D] transition">Windows & Doors</a></li>
+                            <li><a href="#services" class="hover:text-[#C9A24D] transition">Fabrication Works</a></li>
+                            <li><a href="#services" class="hover:text-[#C9A24D] transition">PVC Interiors</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Contact -->
+                    <div>
+                        <h4 class="font-semibold mb-4 text-[#C9A24D]">
+                            Contact
+                        </h4>
+                        <ul class="space-y-3 text-sm text-[#F6F3ED]/80">
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-phone text-[#C9A24D]"></i>
+                                <a href="tel:+916374335075" class="hover:text-[#C9A24D] transition">
+                                    +91 6374335075
+                                </a>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-envelope text-[#C9A24D]"></i>
+                                <a href="mailto:mailtohitech15@gmail.com" class="hover:text-[#C9A24D] transition">
+                                    mailtohitech15@gmail.com
+                                </a>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-location-dot text-[#C9A24D]"></i>
+                                <span>Chennai, Tamil Nadu</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- CTA + Social -->
+                    <div>
+                        <h4 class="font-semibold mb-4 text-[#C9A24D]">
+                            Get in Touch
+                        </h4>
+                        <p class="text-sm text-[#F6F3ED]/80 mb-4">
+                            Ready to upgrade your home? Contact us today.
+                        </p>
+
+                        <a href="#contact"
+                            class="inline-block rounded-full bg-[#C9A24D] px-6 py-2 text-[#1F2F45] font-semibold shadow hover:bg-[#d9b463] transition mb-6">
+                            Contact Us
+                        </a>
+
+                        <!-- Social Icons -->
+                        <div class="flex gap-4 mt-4">
+                            <a href="#" class="social-icon">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                            <a href="https://wa.me/916374335075" target="_blank" class="social-icon">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </a>
+                            <a href="#" class="social-icon">
+                                <i class="fa-brands fa-x-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Bottom Footer -->
+                <div
+                    class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-[#F6F3ED]/70">
+
+                    <p>
+                        © <span id="year"></span> Hi Tech Enterprises. All rights reserved.
+                    </p>
+
+                    <p>
+                        Developed by
+                        <a href="https://musitechhub.com" target="_blank"
+                            class="font-semibold text-[#C9A24D] hover:underline">
+                            musitechhub
+                        </a>
+                    </p>
+
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- Auto Year -->
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+
+    <script src="assets/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- AOS JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+        });
+    </script>
+</body>
+
+</html>
