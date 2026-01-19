@@ -20,7 +20,7 @@
 
 </head>
 
-<body class="font-['Poppins']">
+<body class="font-['Poppins'] bg-[#F6F3ED]">
 
     <!-- Floating WhatsApp Button -->
     <a href="https://wa.me/916374335075?text=Hello%20Hi%20Tech%20Enterprises%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services."
@@ -66,13 +66,13 @@
 
             <!-- Logo -->
             <a href="#" class="flex items-center gap-2">
-                <img src="./assets/images/hi-tech-logo.jpeg" alt="Logo" class="h-16">
+                <img src="./assets/images/hi-tech-logo-nav.png" alt="Logo" class="h-16">
             </a>
 
             <!-- Desktop Menu -->
             <ul class="hidden md:flex items-center gap-10 font-medium text-[#2B2B2B]">
                 <li><a href="./index.html" class="hover:text-[#C9A24D] transition">Home</a></li>
-                <li><a href="./index.html#about-us" class="hover:text-[#C9A24D] transition">About Us</a></li>
+                <li><a href="#about-us" class="hover:text-[#C9A24D] transition">About Us</a></li>
 
                 <li class="relative group">
                     <button class="flex items-center gap-1 hover:text-[#C9A24D] transition">
@@ -184,7 +184,7 @@
                         </summary>
                         <div class="mt-4 grid grid-cols-1 gap-3 text-sm text-[#2B2B2B]">
 
-                            <a href="./mosquitoNets.html" class="mobile-service">
+                            <a href="#" class="mobile-service">
                                 <i class="fa-solid fa-bug"></i>
                                 Mosquito Nets
                             </a>
@@ -242,113 +242,93 @@
         </div>
     </nav>
 
-    <section class="w-full bg-white py-14 sm:py-20 pt-36 sm:pt-52" id="contact">
+    <!-- Mosquito Nets Page -->
+    <section class="pt-40 pb-24 bg-[#F6F3ED] overflow-hidden">
         <div class="mx-auto w-[92%] max-w-7xl">
 
-            <!-- Header -->
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 items-start mb-10">
+            <!-- Feature Strip -->
+            <div class="relative rounded-[32px] bg-[#1F2F45] p-10 sm:p-14 mb-20 text-[#F6F3ED]">
 
-                <!-- Left -->
-                <div class="lg:col-span-2">
-                    <h2 class="text-3xl sm:text-4xl font-extrabold text-[#1F2F45] mb-4">
-                        Get In Touch
-                    </h2>
-                    <p class="text-[#2B2B2B]/80 max-w-xl">
-                        We’d love to hear from you. Whether you need support or want to
-                        upgrade your home, our team is here to help.
+                <div class="max-w-2xl">
+                    <span class="text-sm uppercase tracking-wider text-[#C9A24D] font-semibold">
+                        Our Speciality
+                    </span>
+
+                    <h1 class="text-4xl sm:text-5xl font-extrabold mt-3 mb-5">
+                        Mosquito Net Systems
+                    </h1>
+
+                    <p class="text-[#F6F3ED]/85 text-lg leading-relaxed">
+                        Thoughtfully designed mosquito net solutions for windows and doors,
+                        combining safety, airflow, and everyday comfort with neat installation.
                     </p>
                 </div>
 
-                <!-- Right Info -->
-                <div class="space-y-6">
+                <!-- Decorative Line -->
+                <span class="absolute bottom-0 right-0 w-40 h-40 bg-[#C9A24D]/20 rounded-full blur-3xl"></span>
+            </div>
 
-                    <div class="flex gap-4">
-                        <div class="info-icon">
-                            <i class="fa-solid fa-location-dot"></i>
-                        </div>
-                        <div>
-                            <p class="font-semibold text-[#1F2F45]">Our Address</p>
-                            <p class="text-sm text-[#2B2B2B]/70">Chennai, India</p>
+            <!-- Horizontal Systems -->
+            <div class="relative">
+
+                <h3 class="text-2xl font-extrabold text-[#1F2F45] mb-8">
+                    Available Systems
+                </h3>
+
+                <div class="mosquito-scroll">
+
+                    <!-- Item -->
+                    <div class="mosquito-strip-card">
+                        <img src="./assets/images/mosquito/velcro.jpg" alt="Velcro System">
+                        <div class="strip-content">
+                            <h4>Velcro System</h4>
                         </div>
                     </div>
 
-                    <div class="flex gap-4">
-                        <div class="info-icon">
-                            <i class="fa-solid fa-phone"></i>
-                        </div>
-                        <div>
-                            <p class="font-semibold text-[#1F2F45]">Phone</p>
-                            <p class="text-sm text-[#2B2B2B]/70">+91 6374335075</p>
+                    <div class="mosquito-strip-card">
+                        <img src="./assets/images/mosquito/window-openable.jpg" alt="Window Openable System">
+                        <div class="strip-content">
+                            <h4>Window Openable System</h4>
                         </div>
                     </div>
 
-                    <div class="flex gap-4">
-                        <div class="info-icon">
-                            <i class="fa-solid fa-envelope"></i>
+                    <div class="mosquito-strip-card">
+                        <img src="./assets/images/mosquito/door-openable.jpg" alt="Door Openable System">
+                        <div class="strip-content">
+                            <h4>Door Openable System</h4>
                         </div>
-                        <div>
-                            <p class="font-semibold text-[#1F2F45]">Email</p>
-                            <p class="text-sm text-[#2B2B2B]/70">mailtohitech15@gmail.com</p>
+                    </div>
+
+                    <div class="mosquito-strip-card">
+                        <img src="./assets/images/mosquito/pleated.jpg" alt="Pleated System">
+                        <div class="strip-content">
+                            <h4>Pleated System</h4>
+                        </div>
+                    </div>
+
+                    <div class="mosquito-strip-card">
+                        <img src="./assets/images/mosquito/retractable.jpg" alt="Retractable System">
+                        <div class="strip-content">
+                            <h4>Retractable System</h4>
+                        </div>
+                    </div>
+
+                    <div class="mosquito-strip-card">
+                        <img src="./assets/images/mosquito/security.jpg" alt="Security System">
+                        <div class="strip-content">
+                            <h4>Security System</h4>
                         </div>
                     </div>
 
                 </div>
             </div>
 
-            <!-- Map -->
-            <div class="w-full rounded-3xl overflow-hidden shadow-lg mb-16">
-                <iframe src="https://www.google.com/maps?q=Chennai,+India&output=embed" width="100%" height="420"
-                    style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-            </div>
-
-            <!-- Form -->
-            <div class="bg-[#F6F3ED] rounded-3xl p-8 sm:p-12 shadow-xl max-w-4xl mx-auto">
-
-                <h3 class="text-2xl font-extrabold text-[#1F2F45] mb-8 text-center">
-                    Request a Visit
-                </h3>
-
-                <form class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-
-                    <div class="sm:col-span-2">
-                        <label class="form-label">Name</label>
-                        <input type="text" class="form-input" placeholder="Enter your name">
-                    </div>
-
-                    <div>
-                        <label class="form-label">Phone</label>
-                        <input type="tel" class="form-input" placeholder="+91">
-                    </div>
-
-                    <div>
-                        <label class="form-label">Email</label>
-                        <input type="email" class="form-input" placeholder="example@email.com">
-                    </div>
-
-                    <div>
-                        <label class="form-label">Location</label>
-                        <input type="text" class="form-input" placeholder="Your area">
-                    </div>
-
-                    <div>
-                        <label class="form-label">Date of Visit</label>
-                        <input type="date" class="form-input">
-                    </div>
-
-                    <div class="sm:col-span-2">
-                        <label class="form-label">Your Message</label>
-                        <textarea rows="4" class="form-input resize-none" placeholder="Write your message"></textarea>
-                    </div>
-
-                    <div class="sm:col-span-2 pt-4">
-                        <button type="submit"
-                            class="w-full rounded-full bg-[#1F2F45] py-3 text-[#F6F3ED] font-semibold hover:bg-[#162235] transition">
-                            Submit Request
-                        </button>
-                    </div>
-
-                </form>
+            <!-- CTA -->
+            <div class="mt-20 text-center">
+                <a href="./contact.html"
+                    class="inline-flex items-center justify-center rounded-full bg-[#1F2F45] px-10 py-4 text-[#F6F3ED] font-semibold shadow-lg hover:bg-[#162235] transition">
+                    Book a Free Consultation
+                </a>
             </div>
 
         </div>
@@ -360,7 +340,7 @@
         <!-- Perfect Curve -->
         <div class="absolute -top-1 left-0 w-full overflow-hidden leading-none">
             <svg viewBox="0 0 1440 100" class="w-full h-[80px] sm:h-[100px]" preserveAspectRatio="none">
-                <path d="M0,80 C240,20 480,20 720,50 960,80 1200,80 1440,40 L1440,0 L0,0 Z" fill="#fff">
+                <path d="M0,80 C240,20 480,20 720,50 960,80 1200,80 1440,40 L1440,0 L0,0 Z" fill="#F6F3ED">
                 </path>
             </svg>
         </div>

@@ -462,3 +462,74 @@ body {
     border-color: #C9A24D;
     box-shadow: 0 0 0 2px rgba(201, 162, 77, 0.25);
 }
+
+/* ============= mosquito nets page ============= */
+/* Horizontal Scroll Container */
+.mosquito-scroll {
+    display: flex;
+    gap: 24px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    scroll-snap-type: x mandatory;
+}
+
+.mosquito-scroll::-webkit-scrollbar {
+    height: 6px;
+}
+
+.mosquito-scroll::-webkit-scrollbar-thumb {
+    background: #C9A24D;
+    border-radius: 10px;
+}
+
+/* Strip Cards */
+.mosquito-strip-card {
+    min-width: 280px;
+    height: 360px;
+    border-radius: 26px;
+    overflow: hidden;
+    position: relative;
+    scroll-snap-align: start;
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.18);
+    transition: transform 0.35s ease;
+}
+
+.mosquito-strip-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mosquito-strip-card:hover {
+    transform: translateY(-6px);
+}
+
+/* Overlay */
+.strip-content {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top,
+            rgba(31, 47, 69, 0.95),
+            rgba(31, 47, 69, 0.2));
+    display: flex;
+    align-items: flex-end;
+    padding: 22px;
+}
+
+.strip-content h4 {
+    color: #F6F3ED;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+    .mosquito-strip-card {
+        min-width: 240px;
+        height: 300px;
+    }
+
+    .strip-content h4 {
+        font-size: 16px;
+    }
+}
