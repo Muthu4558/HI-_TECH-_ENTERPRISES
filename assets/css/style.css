@@ -661,3 +661,28 @@ body {
         padding-left: 0;
     }
 }
+
+/* ============= shoe rack page ============= */
+.image-card {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1 / 1;      /* 🔑 keeps all cards equal */
+  overflow: hidden;
+}
+
+.image-fit {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;     /* no cropping */
+  padding: 12px;           /* breathing space */
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.image-fit:hover {
+  transform: scale(1.05);
+}
