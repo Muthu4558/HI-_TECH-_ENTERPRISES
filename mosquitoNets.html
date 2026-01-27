@@ -347,12 +347,12 @@
                         </div>
                     </div>
 
-                    <div class="mosquito-strip-card">
+                    <!-- <div class="mosquito-strip-card">
                         <img src="./assets/images/mosquito/rs5.jpeg" alt="Security System">
                         <div class="strip-content">
                             <h4>Security System</h4>
                         </div>
-                    </div>
+                    </div> -->
 
                 </div>
             </div>
@@ -470,31 +470,50 @@
 
     <!-- Image Modal with Navigation (Responsive) -->
     <div id="velcroModal" class="fixed inset-0 bg-black/80 hidden items-center justify-center z-[999] p-4">
-        <div class="relative flex items-center gap-3">
 
-            <!-- Prev -->
-            <button id="prevVelcro"
-                class="flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white text-black shadow text-xl font-bold">
-                ‹
-            </button>
+        <div class="relative">
 
             <!-- Image -->
-            <div class="relative">
-                <button id="closeVelcroModal"
-                    class="absolute -top-3 -right-3 bg-white w-8 h-8 sm:w-9 sm:h-9 rounded-full flex items-center justify-center text-lg sm:text-xl font-bold shadow">
+            <div class="relative flex justify-center">
+                <button id="closeVelcroModal" class="absolute -top-3 -right-3 bg-white w-8 h-8 sm:w-9 sm:h-9 rounded-full
+               flex items-center justify-center text-lg sm:text-xl font-bold shadow z-10">
                     ×
                 </button>
 
-                <img id="velcroModalImg"
-                    class="max-h-[80vh] max-w-[80vw] sm:max-h-[85vh] sm:max-w-[90vw] rounded-2xl shadow-2xl" />
+                <img id="velcroModalImg" class="max-h-[80vh] max-w-[90vw] rounded-2xl shadow-2xl" />
             </div>
 
-            <!-- Next -->
-            <button id="nextVelcro"
-                class="flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white text-black shadow text-xl font-bold">
-                ›
-            </button>
+            <!-- Navigation -->
+            <div class="flex justify-between items-center mt-4 md:mt-0">
 
+                <!-- Prev (desktop left) -->
+                <button id="prevVelcro" class="hidden md:flex absolute left-[-3rem] top-1/2 -translate-y-1/2
+               items-center justify-center w-10 h-10 rounded-full
+               bg-white text-black shadow text-xl font-bold">
+                    ‹
+                </button>
+
+                <!-- Mobile buttons bottom-right -->
+                <div class="flex gap-3 ml-auto md:hidden">
+                    <button id="prevVelcroMobile" class="w-9 h-9 rounded-full bg-white text-black shadow
+                 flex items-center justify-center text-xl font-bold">
+                        ‹
+                    </button>
+
+                    <button id="nextVelcroMobile" class="w-9 h-9 rounded-full bg-white text-black shadow
+                 flex items-center justify-center text-xl font-bold">
+                        ›
+                    </button>
+                </div>
+
+                <!-- Next (desktop right) -->
+                <button id="nextVelcro" class="hidden md:flex absolute right-[-3rem] top-1/2 -translate-y-1/2
+               items-center justify-center w-10 h-10 rounded-full
+               bg-white text-black shadow text-xl font-bold">
+                    ›
+                </button>
+
+            </div>
         </div>
     </div>
 
@@ -997,7 +1016,7 @@
     </section>
 
     <!-- 3 Door Openable System -->
-    <section class="py-16 bg-[#F6F3ED]">
+    <section id="smart-door-openable" class="py-16 bg-[#F6F3ED]">
         <div class="mx-auto w-[92%] max-w-7xl">
 
             <!-- Header -->
@@ -1102,7 +1121,7 @@
     </section>
 
     <!-- Door Openable System – Smart Door Openable (Compact) -->
-    <section id="smart-door-openable" class="py-16 bg-[#F6F3ED]">
+    <section class="py-16 bg-[#F6F3ED]">
         <div class="mx-auto w-[92%] max-w-7xl">
 
             <!-- Header -->
@@ -1951,8 +1970,13 @@
         const velcroModal = document.getElementById('velcroModal');
         const velcroModalImg = document.getElementById('velcroModalImg');
         const closeVelcroModal = document.getElementById('closeVelcroModal');
+
         const nextVelcro = document.getElementById('nextVelcro');
         const prevVelcro = document.getElementById('prevVelcro');
+
+        // Mobile buttons (optional – exist only on mobile layout)
+        const nextVelcroMobile = document.getElementById('nextVelcroMobile');
+        const prevVelcroMobile = document.getElementById('prevVelcroMobile');
 
         let currentIndex = 0;
 
@@ -1960,6 +1984,7 @@
             velcroModalImg.src = velcroImgs[index].src;
         }
 
+        // Open modal
         velcroImgs.forEach((img, index) => {
             img.addEventListener('click', () => {
                 currentIndex = index;
@@ -1969,23 +1994,49 @@
             });
         });
 
-        nextVelcro.addEventListener('click', () => {
+        // Next image
+        function nextImage() {
             currentIndex = (currentIndex + 1) % velcroImgs.length;
             showImage(currentIndex);
-        });
+        }
 
-        prevVelcro.addEventListener('click', () => {
+        // Previous image
+        function prevImage() {
             currentIndex = (currentIndex - 1 + velcroImgs.length) % velcroImgs.length;
             showImage(currentIndex);
-        });
+        }
 
+        // Desktop buttons
+        nextVelcro.addEventListener('click', nextImage);
+        prevVelcro.addEventListener('click', prevImage);
+
+        // Mobile buttons (if present)
+        if (nextVelcroMobile && prevVelcroMobile) {
+            nextVelcroMobile.addEventListener('click', nextImage);
+            prevVelcroMobile.addEventListener('click', prevImage);
+        }
+
+        // Close modal (button)
         closeVelcroModal.addEventListener('click', () => {
             velcroModal.classList.add('hidden');
             velcroModal.classList.remove('flex');
         });
 
-        velcroModal.addEventListener('click', e => {
+        // Close modal (background click)
+        velcroModal.addEventListener('click', (e) => {
             if (e.target === velcroModal) {
+                velcroModal.classList.add('hidden');
+                velcroModal.classList.remove('flex');
+            }
+        });
+
+        // Optional: keyboard support
+        document.addEventListener('keydown', (e) => {
+            if (velcroModal.classList.contains('hidden')) return;
+
+            if (e.key === 'ArrowRight') nextImage();
+            if (e.key === 'ArrowLeft') prevImage();
+            if (e.key === 'Escape') {
                 velcroModal.classList.add('hidden');
                 velcroModal.classList.remove('flex');
             }
