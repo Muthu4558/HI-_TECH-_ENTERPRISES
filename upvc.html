@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HiTechEnterprises</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/feather-icons"></script>
+    <!-- AOS CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+</head>
+
+<body class="font-['Poppins'] bg-[#F6F3ED]">
+
+    <!-- Floating WhatsApp Button -->
+    <!-- <a href="https://wa.me/916374335075?text=Hello%20Hi%20Tech%20Enterprises%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services."
+        target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a> -->
+
+    <!-- Left Floating Contact Bar -->
+    <div class="left-contact-bar">
+
+        <!-- Call -->
+        <a href="tel:+919047122225" class="contact-item call">
+            <span class="icon">
+                <i class="fa-solid fa-phone"></i>
+            </span>
+            <span class="text">Call +91 90471 22225</span>
+        </a>
+
+        <!-- WhatsApp -->
+        <a href="https://wa.me/916374335075?text=Hello%20Hi%20Tech%20Enterprises%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services."
+            target="_blank" class="contact-item whatsapp">
+            <span class="icon">
+                <i class="fa-brands fa-whatsapp"></i>
+            </span>
+            <span class="text">Chat on WhatsApp</span>
+        </a>
+
+        <!-- Instagram -->
+        <a href="#" target="_blank" class="contact-item instagram">
+            <span class="icon">
+                <i class="fa-brands fa-instagram"></i>
+            </span>
+            <span class="text">Follow on Instagram</span>
+        </a>
+
+    </div>
+
+    <!-- Navbar -->
+    <nav id="navbar" class="w-full flex justify-center pt-6 fixed top-0 left-0 z-50 transition-transform duration-300">
+
+        <div
+            class="w-[92%] max-w-7xl bg-[#F6F3ED] border border-black rounded-2xl shadow-lg px-6 py-4 flex items-center justify-between">
+
+            <!-- Logo -->
+            <a href="./index.html" class="flex items-center gap-2">
+                <img src="./assets/images/hi-tech-logo-nav.png" alt="Logo" class="h-16">
+            </a>
+
+            <!-- Desktop Menu -->
+            <ul class="hidden md:flex items-center gap-10 font-medium text-[#2B2B2B]">
+                <li><a href="./index.html" class="hover:text-[#C9A24D] transition">Home</a></li>
+                <li><a href="#about-us" class="hover:text-[#C9A24D] transition">About Us</a></li>
+
+                <li class="relative group">
+                    <button class="flex items-center gap-1 hover:text-[#C9A24D] transition">
+                        Services
+                        <svg class="w-4 h-4 mt-1 transition-transform group-hover:rotate-180" fill="none"
+                            stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+
+                    <div
+                        class="absolute top-full left-1/2 -translate-x-1/2 mt-4 w-[520px] bg-white rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+
+                        <!-- Header -->
+                        <div class="px-6 py-4 border-b border-black/10">
+                            <p class="text-sm font-semibold text-[#1F2F45] uppercase tracking-wide">
+                                Our Services
+                            </p>
+                        </div>
+
+                        <!-- Services Grid -->
+                        <div class="grid grid-cols-2 gap-x-6 gap-y-4 p-6 text-sm">
+
+                            <a href="./mosquitoNets.html" class="dropdown-item">
+                                <i class="fa-solid fa-bug"></i>
+                                Mosquito Nets
+                            </a>
+
+                            <a href="./ceilingCloth.html" class="dropdown-item">
+                                <i class="fa-solid fa-shirt"></i>
+                                Ceiling Cloth Hangers
+                            </a>
+
+                            <a href="./shoeRack.html" class="dropdown-item">
+                                <i class="fa-solid fa-shoe-prints"></i>
+                                Wall Mounted Shoe Racks
+                            </a>
+
+                            <a href="./toughenedGlass.html" class="dropdown-item">
+                                <i class="fa-solid fa-door-open"></i>
+                                Toughened Glass Doors
+                            </a>
+
+                            <a href="#" class="dropdown-item">
+                                <i class="fa-solid fa-window-maximize"></i>
+                                UPVC Windows & Doors
+                            </a>
+
+                            <a href="#" class="dropdown-item">
+                                <i class="fa-solid fa-layer-group"></i>
+                                ACP Cladding Works
+                            </a>
+
+                            <a href="#" class="dropdown-item">
+                                <i class="fa-solid fa-box"></i>
+                                PVC Loft Cupboards
+                            </a>
+
+                            <a href="#" class="dropdown-item">
+                                <i class="fa-solid fa-border-all"></i>
+                                False Ceiling Works
+                            </a>
+
+                            <a href="#" class="dropdown-item col-span-2">
+                                <i class="fa-solid fa-industry"></i>
+                                All Kinds of Aluminum Fabrication Works
+                            </a>
+
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+            <div>
+                <!-- phone -->
+                <a href="tel:+919047122225"
+                    class="hidden md:inline-flex border border-[#C9A24D] text-[#1F2F45] items-center rounded-full px-6 py-2 hover:bg-[#C9A24D] font-medium transition gap-2">
+                    <span><i class="fa-solid fa-phone"></i></span> +91 63743 35075
+                </a>
+
+                <!-- Contact Button -->
+                <a href="./contact.html"
+                    class="hidden md:inline-flex items-center rounded-full bg-[#1F2F45] px-6 py-2 text-[#F6F3ED] font-medium shadow-md hover:bg-[#162235] transition gap-2">
+                    <span><i class="fa-solid fa-clipboard-list"></i></span> Contact Us
+                </a>
+            </div>
+
+            <!-- 🔥 Mobile Menu Toggle -->
+            <button id="menuBtn"
+                class="md:hidden relative w-12 h-12 rounded-full flex items-center justify-center bg-[#1F2F45] shadow-lg overflow-hidden">
+                <span class="pulse"></span>
+                <span class="cross"></span>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu"
+            class="md:hidden hidden absolute top-[130px] z-50 w-[92%] bg-[#F6F3ED] rounded-2xl shadow-xl p-6">
+
+            <ul class="flex flex-col gap-5 font-medium text-[#2B2B2B]">
+                <li><a href="#">Home</a></li>
+                <li><a href="#about-us">About Us</a></li>
+
+                <li>
+                    <details>
+                        <summary class="flex justify-between cursor-pointer">
+                            Services
+                            <span>⌄</span>
+                        </summary>
+                        <div class="mt-4 grid grid-cols-1 gap-3 text-sm text-[#2B2B2B]">
+
+                            <a href="./mosquitoNets.html" class="mobile-service">
+                                <i class="fa-solid fa-bug"></i>
+                                Mosquito Nets
+                            </a>
+
+                            <a href="./ceilingCloth.html" class="mobile-service">
+                                <i class="fa-solid fa-shirt"></i>
+                                Ceiling Cloth Hangers
+                            </a>
+
+                            <a href="./shoeRack.html" class="mobile-service">
+                                <i class="fa-solid fa-shoe-prints"></i>
+                                Wall Mounted Metal Shoe Racks
+                            </a>
+
+                            <a href="./toughenedGlass.html" class="mobile-service">
+                                <i class="fa-solid fa-door-open"></i>
+                                Toughened Glass Doors
+                            </a>
+
+                            <a href="#" class="mobile-service">
+                                <i class="fa-solid fa-window-maximize"></i>
+                                UPVC Windows and Doors
+                            </a>
+
+                            <a href="#" class="mobile-service">
+                                <i class="fa-solid fa-layer-group"></i>
+                                ACP Cladding Works
+                            </a>
+
+                            <a href="#" class="mobile-service">
+                                <i class="fa-solid fa-box"></i>
+                                PVC Loft Cupboards and Doors
+                            </a>
+
+                            <a href="#" class="mobile-service">
+                                <i class="fa-solid fa-border-all"></i>
+                                False Ceiling Works
+                            </a>
+
+                            <a href="#" class="mobile-service">
+                                <i class="fa-solid fa-industry"></i>
+                                All Kinds of Aluminum Fabrication Works
+                            </a>
+                        </div>
+                    </details>
+                </li>
+
+                <li>
+                    <a href="./contact.html"
+                        class="inline-block rounded-full bg-[#1F2F45] px-6 py-2 text-[#F6F3ED] text-center">
+                        Contact Us
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Toughened Glass Doors Page -->
+    <section class="pt-40 bg-[#F6F3ED] overflow-hidden">
+        <div class="mx-auto w-[92%] max-w-7xl">
+
+            <!-- Feature Strip -->
+            <div class="relative rounded-[32px] bg-[#1F2F45] p-10 sm:p-14 mb-20 text-[#F6F3ED]">
+
+                <div class="max-w-2xl">
+                    <span class="text-sm uppercase tracking-wider text-[#C9A24D] font-semibold">
+                        Our Services
+                    </span>
+
+                    <h1 class="text-4xl sm:text-5xl font-extrabold mt-3 mb-5">
+                        UPVC Windows and Doors
+                    </h1>
+
+                    <p class="text-[#F6F3ED]/85 text-lg leading-relaxed">
+                        Elegantly crafted UPVC windows and doors, offering long-lasting strength,
+                        stylish design, and optimal performance with flawless installation.
+                    </p>
+
+                </div>
+
+                <!-- Decorative Line -->
+                <span class="absolute bottom-0 right-0 w-40 h-40 bg-[#C9A24D]/20 rounded-full blur-3xl"></span>
+            </div>
+
+            <!-- Horizontal Systems -->
+            <div class="relative">
+
+                <h3 class="text-2xl font-extrabold text-[#1F2F45] mb-8">
+                    Available Items
+                </h3>
+
+                <div class="mosquito-scroll">
+
+                    <!-- Item -->
+                    <div class="mosquito-strip-card">
+                        <img src="./assets/images/upvc/u1.jpeg" alt="Velcro System">
+                        <div class="strip-content">
+                            <!-- <h4>3 Rack (Model-JB3)</h4> -->
+                        </div>
+                    </div>
+
+                    <div class="mosquito-strip-card">
+                        <img src="./assets/images/upvc/u2.jpeg" alt="Window Openable System">
+                        <div class="strip-content">
+                            <!-- <h4>3 Rack (Model-JI3)</h4> -->
+                        </div>
+                    </div>
+
+                    <div class="mosquito-strip-card">
+                        <img src="./assets/images/upvc/u3.jpeg" alt="Door Openable System">
+                        <div class="strip-content">
+                            <!-- <h4>3 Rack (Model-JG3)</h4> -->
+                        </div>
+                    </div>
+
+                    <div class="mosquito-strip-card">
+                        <img src="./assets/images/upvc/u4.jpeg" alt="Pleated System">
+                        <div class="strip-content">
+                            <!-- <h4>4 Rack (Model-JB4)</h4> -->
+                        </div>
+                    </div>
+
+                    <div class="mosquito-strip-card">
+                        <img src="./assets/images/upvc/u5.jpeg" alt="Retractable System">
+                        <div class="strip-content">
+                            <!-- <h4>4 Rack (Model-JI4)</h4> -->
+                        </div>
+                    </div>
+
+                    <div class="mosquito-strip-card">
+                        <img src="./assets/images/upvc/u6.jpeg" alt="Retractable System">
+                        <div class="strip-content">
+                            <!-- <h4>4 Rack (Model-JI4)</h4> -->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="mt-20 text-center">
+                <a href="./contact.html"
+                    class="inline-flex items-center justify-center rounded-full bg-[#1F2F45] px-10 py-4 text-[#F6F3ED] font-semibold shadow-lg hover:bg-[#162235] transition">
+                    Book a Free Consultation
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Image Modal with Navigation (Responsive) -->
+    <div id="velcroModal" class="fixed inset-0 bg-black/80 hidden items-center justify-center z-[999] p-4">
+
+        <div class="relative">
+
+            <!-- Image -->
+            <div class="relative flex justify-center">
+                <button id="closeVelcroModal" class="absolute -top-3 -right-3 bg-white w-8 h-8 sm:w-9 sm:h-9 rounded-full
+               flex items-center justify-center text-lg sm:text-xl font-bold shadow z-10">
+                    ×
+                </button>
+
+                <img id="velcroModalImg" class="max-h-[80vh] max-w-[90vw] rounded-2xl shadow-2xl" />
+            </div>
+
+            <!-- Navigation -->
+            <div class="flex justify-between items-center mt-4 md:mt-0">
+
+                <!-- Prev (desktop left) -->
+                <button id="prevVelcro" class="hidden md:flex absolute left-[-3rem] top-1/2 -translate-y-1/2
+               items-center justify-center w-10 h-10 rounded-full
+               bg-white text-black shadow text-xl font-bold">
+                    ‹
+                </button>
+
+                <!-- Mobile buttons bottom-right -->
+                <div class="flex gap-3 ml-auto md:hidden">
+                    <button id="prevVelcroMobile" class="w-9 h-9 rounded-full bg-white text-black shadow
+                 flex items-center justify-center text-xl font-bold">
+                        ‹
+                    </button>
+
+                    <button id="nextVelcroMobile" class="w-9 h-9 rounded-full bg-white text-black shadow
+                 flex items-center justify-center text-xl font-bold">
+                        ›
+                    </button>
+                </div>
+
+                <!-- Next (desktop right) -->
+                <button id="nextVelcro" class="hidden md:flex absolute right-[-3rem] top-1/2 -translate-y-1/2
+               items-center justify-center w-10 h-10 rounded-full
+               bg-white text-black shadow text-xl font-bold">
+                    ›
+                </button>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- UPVC Windows and Doors -->
+    <section class="pt-20 pb-24 bg-[#F6F3ED] overflow-hidden">
+        <div class="mx-auto w-[92%] max-w-7xl">
+
+            <!-- Header -->
+            <div class="mb-14">
+                <span class="text-xs uppercase tracking-widest text-[#C9A24D] font-semibold">
+                    Energy-Efficient Comfort
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-[#1F2F45] mt-2">
+                    UPVC Windows and Doors
+                </h2>
+                <p class="text-[#1F2F45]/80 mt-4 max-w-3xl">
+                    Smartly engineered UPVC windows and doors designed to enhance security,
+                    improve insulation, and make everyday living more comfortable and convenient
+                    for modern homes.
+                </p>
+            </div>
+
+            <!-- Content Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+
+                <!-- Left: Key Benefits -->
+                <div class="bg-white rounded-2xl shadow-lg p-8">
+                    <h3 class="text-xl font-bold text-[#1F2F45] mb-6">
+                        Key Benefits
+                    </h3>
+
+                    <ul class="space-y-4 text-sm text-[#1F2F45]/85">
+
+                        <li>
+                            <strong>Energy Efficiency & Insulation:</strong>
+                            Low heat conductivity helps maintain indoor temperature,
+                            reducing heating and cooling costs by up to 30%.
+                        </li>
+
+                        <li>
+                            <strong>Durability & Weather Resistance:</strong>
+                            Resistant to rot, corrosion, warping, UV rays, and extreme
+                            weather conditions without fading or yellowing.
+                        </li>
+
+                        <li>
+                            <strong>Low Maintenance:</strong>
+                            No sanding, repainting, or varnishing required—simple
+                            cleaning keeps them looking new.
+                        </li>
+
+                        <li>
+                            <strong>Enhanced Security:</strong>
+                            Strong profiles with advanced multi-point locking systems
+                            provide superior protection against break-ins.
+                        </li>
+
+                        <li>
+                            <strong>Sound Insulation:</strong>
+                            Tight sealing reduces external noise levels by up to 40 dB,
+                            creating a quieter indoor environment.
+                        </li>
+
+                    </ul>
+                </div>
+
+                <!-- Right: Additional Advantages -->
+                <div class="bg-[#1F2F45] rounded-2xl p-8 text-[#F6F3ED]">
+                    <h3 class="text-xl font-bold mb-6 text-[#C9A24D]">
+                        Additional Advantages
+                    </h3>
+
+                    <ul class="space-y-4 text-sm">
+                        <li>✔ 100% recyclable and eco-friendly material</li>
+                        <li>✔ Lead-free profiles with low carbon footprint</li>
+                        <li>✔ Naturally fire-retardant and non-combustible</li>
+                        <li>✔ Smooth finish with modern aesthetics</li>
+                        <li>✔ Ideal for residential and commercial applications</li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- UPVC Windows u Doors – Image Gallery -->
+    <section class="py-20 bg-[#F6F3ED]">
+        <div class="mx-auto w-[92%] max-w-7xl">
+
+            <!-- Header -->
+            <div class="mb-10 text-center">
+                <h3 class="text-2xl sm:text-3xl font-extrabold text-[#1F2F45]">
+                    Product Gallery
+                </h3>
+                <p class="text-[#1F2F45]/70 mt-2">
+                    Click any image to view in full size
+                </p>
+            </div>
+
+            <!-- Image Grid -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+
+                <div class="image-card">
+                    <img src="./assets/images/upvc/u1.jpeg" class="image-fit velcro-img"
+                        alt="Ceiling Cloth Hanger Image 1" />
+                </div>
+
+                <div class="image-card">
+                    <img src="./assets/images/upvc/u2.jpeg" class="image-fit velcro-img"
+                        alt="Ceiling Cloth Hanger Image 2" />
+                </div>
+
+                <div class="image-card">
+                    <img src="./assets/images/upvc/u3.jpeg" class="image-fit velcro-img"
+                        alt="Ceiling Cloth Hanger Image 3" />
+                </div>
+
+                <div class="image-card">
+                    <img src="./assets/images/upvc/u4.jpeg" class="image-fit velcro-img"
+                        alt="Ceiling Cloth Hanger Image 4" />
+                </div>
+
+                <div class="image-card">
+                    <img src="./assets/images/upvc/u5.jpeg" class="image-fit velcro-img"
+                        alt="Ceiling Cloth Hanger Image 4" />
+                </div>
+
+                <div class="image-card">
+                    <img src="./assets/images/upvc/u6.jpeg" class="image-fit velcro-img"
+                        alt="Ceiling Cloth Hanger Image 5" />
+                </div>
+
+                <div class="image-card">
+                    <img src="./assets/images/upvc/u7.jpeg" class="image-fit velcro-img"
+                        alt="Ceiling Cloth Hanger Image 6" />
+                </div>
+
+                <div class="image-card">
+                    <img src="./assets/images/upvc/u8.jpeg" class="image-fit velcro-img"
+                        alt="Ceiling Cloth Hanger Image 6" />
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="relative bg-[#1F2F45] text-[#F6F3ED] mt-20">
+
+        <!-- Perfect Curve -->
+        <div class="absolute -top-1 left-0 w-full overflow-hidden leading-none">
+            <svg viewBox="0 0 1440 100" class="w-full h-[80px] sm:h-[100px]" preserveAspectRatio="none">
+                <path d="M0,80 C240,20 480,20 720,50 960,80 1200,80 1440,40 L1440,0 L0,0 Z" fill="#F6F3ED">
+                </path>
+            </svg>
+        </div>
+
+        <!-- Footer Content -->
+        <div class="relative pt-24 sm:pt-32 pb-10">
+            <div class="mx-auto w-[92%] max-w-7xl">
+
+                <!-- Top Footer -->
+                <div
+                    class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 pb-10 border-b border-white/20 text-center sm:text-left">
+
+                    <!-- Brand -->
+                    <div class="flex flex-col items-center sm:items-start">
+                        <img width="140" class="rounded-2xl mb-5" src="./assets/images/hi-tech-logo.jpeg"
+                            alt="Hi Tech Enterprises">
+                        <p class="text-sm text-[#F6F3ED]/80 leading-relaxed max-w-xs">
+                            Practical, space-saving, and everyday home solutions designed for
+                            modern living with quality and care.
+                        </p>
+                    </div>
+
+                    <!-- Services -->
+                    <div>
+                        <h4 class="font-semibold mb-4 text-[#C9A24D]">
+                            Services
+                        </h4>
+                        <ul class="space-y-2 text-sm text-[#F6F3ED]/80">
+                            <li><a href="#services" class="hover:text-[#C9A24D] transition">Mosquito Nets</a></li>
+                            <li><a href="#services" class="hover:text-[#C9A24D] transition">Space Saving Solutions</a>
+                            </li>
+                            <li><a href="#services" class="hover:text-[#C9A24D] transition">Windows & Doors</a></li>
+                            <li><a href="#services" class="hover:text-[#C9A24D] transition">Fabrication Works</a></li>
+                            <li><a href="#services" class="hover:text-[#C9A24D] transition">PVC Interiors</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Contact -->
+                    <div>
+                        <h4 class="font-semibold mb-4 text-[#C9A24D]">
+                            Contact
+                        </h4>
+                        <ul class="space-y-3 text-sm text-[#F6F3ED]/80">
+                            <li class="flex items-center justify-center sm:justify-start gap-3">
+                                <i class="fa-solid fa-phone text-[#C9A24D]"></i>
+                                <a href="tel:+916374335075" class="hover:text-[#C9A24D] transition">
+                                    +91 6374335075
+                                </a>
+                            </li>
+                            <li class="flex items-center justify-center sm:justify-start gap-3">
+                                <i class="fa-solid fa-envelope text-[#C9A24D]"></i>
+                                <a href="mailto:mailtohitech15@gmail.com" class="hover:text-[#C9A24D] transition">
+                                    mailtohitech15@gmail.com
+                                </a>
+                            </li>
+                            <li class="flex items-center justify-center sm:justify-start gap-3">
+                                <i class="fa-solid fa-location-dot text-[#C9A24D]"></i>
+                                <span>Chennai, Tamil Nadu</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- CTA + Social -->
+                    <div class="flex flex-col items-center sm:items-start">
+                        <h4 class="font-semibold mb-4 text-[#C9A24D]">
+                            Get in Touch
+                        </h4>
+                        <p class="text-sm text-[#F6F3ED]/80 mb-4 max-w-xs">
+                            Ready to upgrade your home? Contact us today.
+                        </p>
+
+                        <a href="#contact"
+                            class="inline-block rounded-full bg-[#C9A24D] px-6 py-2 text-[#1F2F45] font-semibold shadow hover:bg-[#d9b463] transition mb-6">
+                            Contact Us
+                        </a>
+
+                        <!-- Social Icons -->
+                        <div class="flex gap-4">
+                            <a href="#" class="social-icon">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                            <a href="https://wa.me/916374335075" target="_blank" class="social-icon">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </a>
+                            <a href="#" class="social-icon">
+                                <i class="fa-brands fa-x-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Bottom Footer -->
+                <div
+                    class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-[#F6F3ED]/70 text-center sm:text-left">
+
+                    <p>
+                        © <span id="year"></span> Hi Tech Enterprises. All rights reserved.
+                    </p>
+
+                    <p>
+                        Developed by
+                        <a href="https://musitechhub.com" target="_blank"
+                            class="font-semibold text-[#C9A24D] hover:underline">
+                            musitechhub
+                        </a>
+                    </p>
+
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- Auto Year -->
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+    <script src="assets/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- AOS JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+        });
+
+        const velcroImgs = document.querySelectorAll('.velcro-img');
+        const velcroModal = document.getElementById('velcroModal');
+        const velcroModalImg = document.getElementById('velcroModalImg');
+        const closeVelcroModal = document.getElementById('closeVelcroModal');
+
+        const nextVelcro = document.getElementById('nextVelcro');
+        const prevVelcro = document.getElementById('prevVelcro');
+
+        // Mobile buttons (optional – exist only on mobile layout)
+        const nextVelcroMobile = document.getElementById('nextVelcroMobile');
+        const prevVelcroMobile = document.getElementById('prevVelcroMobile');
+
+        let currentIndex = 0;
+
+        function showImage(index) {
+            velcroModalImg.src = velcroImgs[index].src;
+        }
+
+        // Open modal
+        velcroImgs.forEach((img, index) => {
+            img.addEventListener('click', () => {
+                currentIndex = index;
+                showImage(currentIndex);
+                velcroModal.classList.remove('hidden');
+                velcroModal.classList.add('flex');
+            });
+        });
+
+        // Next image
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % velcroImgs.length;
+            showImage(currentIndex);
+        }
+
+        // Previous image
+        function prevImage() {
+            currentIndex = (currentIndex - 1 + velcroImgs.length) % velcroImgs.length;
+            showImage(currentIndex);
+        }
+
+        // Desktop buttons
+        nextVelcro.addEventListener('click', nextImage);
+        prevVelcro.addEventListener('click', prevImage);
+
+        // Mobile buttons (if present)
+        if (nextVelcroMobile && prevVelcroMobile) {
+            nextVelcroMobile.addEventListener('click', nextImage);
+            prevVelcroMobile.addEventListener('click', prevImage);
+        }
+
+        // Close modal (button)
+        closeVelcroModal.addEventListener('click', () => {
+            velcroModal.classList.add('hidden');
+            velcroModal.classList.remove('flex');
+        });
+
+        // Close modal (background click)
+        velcroModal.addEventListener('click', (e) => {
+            if (e.target === velcroModal) {
+                velcroModal.classList.add('hidden');
+                velcroModal.classList.remove('flex');
+            }
+        });
+
+        // Optional: keyboard support
+        document.addEventListener('keydown', (e) => {
+            if (velcroModal.classList.contains('hidden')) return;
+
+            if (e.key === 'ArrowRight') nextImage();
+            if (e.key === 'ArrowLeft') prevImage();
+            if (e.key === 'Escape') {
+                velcroModal.classList.add('hidden');
+                velcroModal.classList.remove('flex');
+            }
+        });
+    </script>
+</body>
+
+</html>
