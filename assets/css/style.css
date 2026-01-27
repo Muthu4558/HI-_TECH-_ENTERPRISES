@@ -464,7 +464,26 @@ body {
 }
 
 /* ============= mosquito nets page ============= */
-/* Horizontal Scroll Container */
+.service-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(201,162,77,0.5);
+  color: #F6F3ED;
+  font-weight: 500;
+  font-size: 14px;
+  transition: all 0.25s ease;
+}
+
+.service-pill:hover {
+  background: #C9A24D;
+  color: #1F2F45;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(201,162,77,0.35);
+}
+
 .mosquito-scroll {
     display: flex;
     gap: 24px;
